@@ -8,6 +8,7 @@ import javax.swing.JFrame;
 import javax.swing.JList;
 import javax.swing.JOptionPane;
 import javax.swing.JScrollPane;
+import javax.swing.JTable;
 import javax.swing.JTextArea;
 import javax.swing.WindowConstants;
 
@@ -18,7 +19,7 @@ public class FrmTablaDistribucion extends JFrame {
     String[] opciones = new String[] { "Excelente", "Buena", "Regular", "Mala" };
 
     public FrmTablaDistribucion() {
-        setSize(400, 300);
+        setSize(600, 500);
         setTitle("Tabla deDistribución");
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(null);
@@ -53,6 +54,12 @@ public class FrmTablaDistribucion extends JFrame {
         JButton btnTablaDistribucion = new JButton("Calcular");
         btnTablaDistribucion.setBounds(10, 200, 100, 25);
         getContentPane().add(btnTablaDistribucion);
+
+        JTable tblTablaDistribucion=new JTable();
+        JScrollPane spTablaDistribucion = new JScrollPane(tblTablaDistribucion);
+        spTablaDistribucion.setBounds(10,230,500,200);
+        getContentPane().add(spTablaDistribucion);
+
 
         // eventos de la GUI
         btnAgregar.addActionListener(new ActionListener() {
